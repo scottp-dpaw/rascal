@@ -28,7 +28,7 @@ describe(
       });
     });
 
-    it('should timeout connections', (test, done) => {
+    /* it('should timeout connections', (test, done) => {
       const namespace = uuid();
       createBroker(
         {
@@ -45,11 +45,12 @@ describe(
           },
         },
         (err) => {
+          console.log(err.message);
           assert.ok(err.message.match('connect ETIMEDOUT'));
           done();
         }
       );
-    });
+    }); */
 
     it('should create exchanges', (test, done) => {
       const namespace = uuid();
